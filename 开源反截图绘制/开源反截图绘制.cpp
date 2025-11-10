@@ -36,6 +36,8 @@ int main()
 			("FPS: " + std::to_string((int)ImGui::GetIO().Framerate)).c_str()
 		);
 
+		Overlay::DrawTxt(L"Q群 849446012", 10, 30);
+
 		ImGui::Render();
 		Overlay::device_context->OMSetRenderTargets(1, &Overlay::render_target_view, NULL);
 		Overlay::device_context->ClearRenderTargetView(Overlay::render_target_view, (float*)&clear_clr); // might break, if so then put cheat color of type ImVec4 { 0,0,0,0 }
